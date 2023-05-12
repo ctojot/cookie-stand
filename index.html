@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookies</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ccs/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -14,15 +14,26 @@
         <a href="sales.html">Sales</a>
     </header>
     <main>
-        <h2>Stores</h2>
+        <div id="newstand">
+            <form id="store-form">
+                <fieldset>
+                    <legend>Join The Team!</legend>
+                    <label for="city">City:</label>
+                    <input type="text" id="city">
+
+                </fieldset>
+                <button type="submit">Submit
+                </button>
+            </form>
+        </div>
         <div id="stores"></div>
-        <img src="chinook.jpg" alt="chinook"/>
-        <img src="cutter.jpeg" alt="cutter"/>
-        <img src="family.jpg" alt="family"/>
-        <img src="fish.jpg" alt="fish"/>
-        <img src="frosted-cookie.jpg" alt="frosted cookie"/>
-        <img src="salmon.png" alt="salmon"/>
-        <img src="shirt.jpg" alt="shirt"/>
+        <img src="img/chinook.jpg" alt="chinook"/>
+        <img src="img/cutter.jpeg" alt="cutter"/>
+        <img src="img/family.jpg" alt="family"/>
+        <img src="img/fish.jpg" alt="fish"/>
+        <img src="img/frosted-cookie.jpg" alt="frosted cookie"/>
+        <img src="img/shirt.jpg" alt="shirt"/>
+        <img src="img/salmon.png" alt="salmon"/>
         <div id-="Store Hours">
             <p>
                 Monday: 6 a.m. - 8 p.m.
@@ -39,6 +50,7 @@
                 <br>
                 Sunday: CLOSE
             </p>
+        </div>
     </main>
     <footer>
         <div id="contactinfo">
@@ -47,9 +59,6 @@
             (999) - 999 - 9999<br>
             us@salmoncookies.com<br>
             @salmoncookies
-        </div>
-            <h2>Store Hours</h2>
-        </div>
             <h2>Other Locations</h2>
         <div class="locations">
             <h3>Seattle</h3>
@@ -78,6 +87,7 @@
             </p>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>
 
