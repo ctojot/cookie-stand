@@ -8,6 +8,20 @@ const storeArray = [];
 
 const table = document.getElementById('stores');
 
+let myForm = document.getElementById('store-form');
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let cityName = event.target.city.value;
+  let newStore = new Store('name');
+  storeArray.push(newStore);
+  newStore.render();
+  myForm.reset();
+}
+myForm.addEventListener('submit', handleSubmit);
+
 function renderAll() {
   let rowHeader = document.createElement('tr');
   table.appendChild(rowHeader);
@@ -63,8 +77,8 @@ function Store(name, minCust, maxCust, avgSale) {
   this.maxCust = maxCust;
   this.avgSale = avgSale;
   this.customerPerHour = [],
-  this.hourlySales = [],
-  this.counter = 0;
+    this.hourlySales = [],
+    this.counter = 0;
   this.dailyTotalSales = 0;
 
 }
