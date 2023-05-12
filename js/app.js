@@ -15,9 +15,15 @@ function handleSubmit(event) {
   event.preventDefault();
 
   let cityName = event.target.city.value;
+  let minCust = +event.target.mincust.value;
+  let maxCust = +event.target.maxcust.value;
+  let avgCookieSale = +event.target.avgcookiesale.value;
+
   let newStore = new Store('name');
   storeArray.push(newStore);
+  table.innerHTML('');
   newStore.render();
+  renderAll();
   myForm.reset();
 }
 myForm.addEventListener('submit', handleSubmit);
@@ -77,8 +83,8 @@ function Store(name, minCust, maxCust, avgSale) {
   this.maxCust = maxCust;
   this.avgSale = avgSale;
   this.customerPerHour = [],
-    this.hourlySales = [],
-    this.counter = 0;
+  this.hourlySales = [],
+  this.counter = 0;
   this.dailyTotalSales = 0;
 
 }
